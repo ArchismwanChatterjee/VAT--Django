@@ -1,0 +1,33 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        img {
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        {% for i in u %}
+        <tr>
+            <td>{{i.purl}}</td>
+            <td><img src="../static/{{ i.purl }}" width="100px" height="100px"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
